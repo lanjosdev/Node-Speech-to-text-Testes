@@ -7,16 +7,28 @@ const client = new speech.SpeechClient({
   keyFilename: './credenciais.json'
 });
 
+// Frases chaves:
+const keywords = [
+  'teste de som', 
+  'buscar por',
+];
+
 // Set Configs:
 const encoding = 'LINEAR16';
 const sampleRateHertz = 16000;
 const languageCode = 'pt-BR';
-
 const request = {
   config: {
     encoding: encoding,
     sampleRateHertz: sampleRateHertz,
     languageCode: languageCode,
+    enableSpeakerDiarization: true,
+    model: 'latest_long',
+    diarizationConfig: {
+      enableSpeakerDiarization: true,
+      minSpeakerCount: 2,
+      maxSpeakerCount: 2,
+    }
   },
   interimResults: false, // If you want interim results, set this to true
 };
@@ -25,27 +37,37 @@ const request = {
 const recognizeStream = client
   .streamingRecognize(request)
   .on('error', console.error)
-  .on('data', data =>
-    process.stdout.write(
-      data.results[0] && data.results[0].alternatives[0]
-        ? `Transcription: ${data.results[0].alternatives[0].transcript}\n`
-        : '\n\nReached transcription time limit, press Ctrl+C\n'
-    )
-  );
+  .on('data', (data) => {
+    if(data.results[0].isFinal) {
+      let transcricaoAtual = data.results[0].alternatives[0].transcript;
+
+      // Verificação de frases chaves:
+      for(let element of keywords) {
+        //pode ser por .match(/element/)?
+        if(transcricaoAtual.includes(element)) {
+          console.log(`[ALERTA]: ${transcricaoAtual}`);
+          return; //ou break
+        }
+      }
+
+      console.log(`Transcrição: ${transcricaoAtual}`);
+    }
+  });
 
 // Start recording and send the microphone input to the Speech API.
 // Ensure SoX is installed, see https://www.npmjs.com/package/node-record-lpcm16#dependencies
-recorder
-  .record({
-    sampleRateHertz: sampleRateHertz,
-    threshold: 0,
-    // Other options, see https://www.npmjs.com/package/node-record-lpcm16#options
-    verbose: false,
-    recordProgram: 'rec', // Try also "arecord" or "sox"
-    silence: '10.0',
-  })
-  .stream()
-  .on('error', console.error)
-  .pipe(recognizeStream);
+const audioStream = recorder.record({
+  sampleRate: sampleRateHertz, // Sample rate (adjust as needed)
+  channels: 1, // Mono audio
+  audioType: 'raw', // Output audio type
+}).stream();
+audioStream.on('end', () => {
+  recognizeStream.end();
+});
+audioStream.on('spawn', () => {
+  console.log('spawn');
+});
+audioStream.pipe(recognizeStream);
 
-console.log('Listening, press Ctrl+C to stop.');
+
+console.log('Escutando, pressione Ctrl+C p/ parar.');
