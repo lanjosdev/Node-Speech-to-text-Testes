@@ -1,13 +1,13 @@
 {
-  "type": "service_account",
-  "project_id": "blissful-canto-412715",
-  "private_key_id": "049a54f6c2ee4be3be0e91cf1a88d85585cccc65",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCmkNqhRXq9RnYS\nS+xjE98PnAFihwmqTLg9wkgCm6qef9/76V68yItNs19M/M1VrmLht+v+f5cE7NXM\n+2C3R3Yqb+b8zUWH58/JuKuw7qQjoz1zcE0BByv1DtTw0T5VfqyPk7oGGY5KrAG8\n+nHcghwtXI3fikXCE5LCjmvJCO2MZdEonYmSYr8ZGNtdN+WEraaHa5mHl/SCyf04\nrVVO6zH3/X2a/FBvDDkSjGqb/eLTqld9xEuI+fmRWXI99QyOJlzGTKzc9lvg4eyL\n7anHukISq4i+8vFnBHQWkRVperqfRHfUgyTdLnPaG69JDdKLbjCtx5W64X8L1QTu\nQiu8lAvRAgMBAAECggEABKWHV9bkmumfixifnk70Ws7fEgTS3fOYcy6bjCkUDCpk\nkPY8bJdKnY8Ksk7eGo0MGKBlHrsn9xz1ROvhUZOWhg4Lm1NNpIIwv3+dmIi7vvvD\nj9ga6dOto/83LQWlT8TCIxo7pwZo/AfK35779KsThqdtlMYadpTNtAw9kQTk/ZTg\n9STAUrzQCunNgS7i8oOh89kD9AEcGfGjXAxN8xUXY/pPYkLuT69AfEqp6MBVrFMI\n8IsNCJ+2hPvrcDXVTIvMyOXWDZPN/Fbpl/HmY9TzXUAZkBs3XuKNXAGilz/5jl3x\n/j/cMf2F6Yl4ZDlW2UgPGwuf0rk3nxJ5ZVmOkHpAPQKBgQDnqVcpa4U+U7mnaCdv\nFY0O4MiXHKSrf2FOEharBuG41xxBap9KKLbqZ9MmESYdn4MsjbXKTojDe2k1MM8i\n5+o6sUShi7M/csDYC89YZrlKC/banf7xuqQsPuZMar0EkQxKlCegM7eO3Va2zBBj\nvm8uwiTpTm+Q0pIXPcg4VoqujQKBgQC4ELsyHst4elcgxqBaywrSvnr9g57wylC7\nhE/iD+Gj04XsZl5qIZFjmC8+0DDfHvrrAWvJEkpnhZTiH0c8vGFDalMRvFS114wI\ng2jwahe6+3lNBx1PKHvUzdTHZqFQNbTIguy7QeuwS3HXT2om2KGOj4CGo2Ynu7dL\nHERVV0ozVQKBgEL6Tt0G3Ss8Ab1I+72+OV5H1zb5bRK4bWWpDSy9fJ14dA7lyNAk\nHV6ATif/ZUnDSKWlAx5OvnPmRnC+f+TTsIDvp6wdO+HoR6EvKO+iI4gpFWH3tDIn\niDfSp7sIUUX0ud0GIL7MtRF1JREMxuBPus2GDC34I4F3oA1gK3c+bjIxAoGAZnfJ\n/ojuNM/GmVR6CJFoIRIxXdhcLygx8XIjFnJI5u7ma0hB30t4qL0b8BfuXQfeH93W\np0Urbp4K2CcZfVJRwzn5rLHvZpvsNQES9mPZehps2NjRFDQxW7KKdcdInmKHlehs\n6YI1NxuI8JghPCb1KWvx3QIx6ISz8Xh3AhtqD1ECgYEA1z15WoauD9MCBXr3DWGJ\nuHL2drSyEf1d0YnhmTOv7ZZ4XcG+qvVZCbYxM98hbxMpmZmar04t9sBWGkpWs86i\nBg6gvvqashKgMJwOA73iCh3gmdc+8tijbZw1KPV4J5n6+PycDHK8y2G1Y5lX12H7\n0lIqxrywsAeOLimOorAJEH0=\n-----END PRIVATE KEY-----\n",
-  "client_email": "speech-to-text-client@blissful-canto-412715.iam.gserviceaccount.com",
-  "client_id": "112785945156761072802",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speech-to-text-client%40blissful-canto-412715.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
+  "type": "nope",
+  "project_id": "nope",
+  "private_key_id": "nope",
+  "private_key": "nope",
+  "client_email": "nope",
+  "client_id": "nope",
+  "auth_uri": "nope",
+  "token_uri": "nope",
+  "auth_provider_x509_cert_url": "nope",
+  "client_x509_cert_url": "nope",
+  "universe_domain": "nope"
 }
